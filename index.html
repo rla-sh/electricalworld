@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<!-- google font Cossette Texte, Bitcount Single -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:slnt,wght@-8,700&family=Cossette+Texte:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- 타이틀 옆에 이미지 -->
+	<link rel="shortcut icon" type="image/x-icon" href="icon-egg-pink.png">
+	<title>← 심심하신 분 여기로</title>
+
+<style>
+/*기본*/
+body, h1, h2, p, ul{margin: 0; padding: 0;}
+
+/*한글 부크크 고닥 클래스*/
+
+	@font-face {
+		    font-family: 'BookkGothic';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Lt.woff2') format('woff2');
+		    font-weight: 300;
+		    font-display: swap;
+		}
+	.bookk-300{
+		font-family: 'BookkGothic';
+		font-weight: 300;
+	}
+
+	@font-face {
+		    font-family: 'BookkGothic';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+		    font-weight: 700;
+		    font-display: swap;
+		}
+	.bookk-700{
+		font-family: 'BookkGothic';
+		font-weight: 700;
+	}
+
+
+/*영어 폰트 클래스*/
+	.cossette-texte-regular {
+	  font-family: "Cossette Texte", sans-serif;
+	  font-weight: 400;
+	  font-style: normal;
+	}
+	.cossette-texte-bold {
+	  font-family: "Cossette Texte", sans-serif;
+	  font-weight: 700;
+	  font-style: normal;
+	}
+	.bitcount-single {
+	  font-family: "Bitcount Single", system-ui;
+	  font-optical-sizing: auto;
+	  font-weight: 700;
+	  font-style: normal;
+	  font-variation-settings:
+	    "slnt" -8,
+	    "CRSV" 0.5,
+	    "ELSH" 0,
+	    "ELXP" 0;
+	}
+
+
+/*텍스트 관련 클래수*/
+	.text-left{text-align: left;}
+	.text-center{text-align: center;}
+
+	.text-white{color: white;}
+	.text-pink{color: #FE01ED;}
+	.text-yellow{color: #C4FF20;}
+	.text-blue{color: #2F2AFF;}
+
+	.text-box-1{
+				display: inline-block;
+				background: #C4FF20;
+				border: 5px solid #FE01ED;
+				padding: 15px 15px;
+				position: absolute;
+				z-index: 2;
+			}
+	.text-box-1-1{
+				display: inline-block;
+				background: #C4FF20;
+				border: 5px solid #FE01ED;
+				padding: 15px 15px;
+				position: absolute;
+
+			}
+
+	.text-box-2{
+				display: inline-block;
+				background: #FE01ED;
+				border: 3px solid #2F2AFF;
+				padding: 15px 15px;
+				color: #C4FF20;
+				/*z-index: 2;*/
+			}
+	.text-box-3{
+			display: inline-block;
+			background: #FE01ED;
+			border: 5px solid #C4FF20;
+			padding: 15px 15px;
+		}
+	.text-box-4{
+				background: #C4FF20;
+				border: 6px solid #FE01ED;
+
+			}
+	.text-box-white{
+				background:white;
+				display: inline-block;
+			}
+	.text-box-blue{
+				background: #0600FF;
+
+
+			}
+
+/*class*/
+	.flex{display: flex;}
+	.menu{
+			display: flex;
+			padding: 20px 20px;
+		}
+			.menu a:hover { 
+	    transform: rotate(15deg);
+	    transition: all 0.2s;
+	    color: #FE01ED;}
+	.logo{
+			padding: 20px 20px; 
+			width: 100px;
+			position: relative;
+			display: inline-block;
+		}
+			.logo img:hover {animation: rotationY 1s linear infinite;}
+			@keyframes rotationY{
+        to{transform: rotateY(360deg);}
+				}
+
+
+/*부모에 relative, 자식에 absolute*/
+.absolute{
+	position: absolute;
+  left:0; 
+  top:0;
+}
+
+/*기타 효과*/
+	.blur{
+		backdrop-filter: blur(20px);
+	}
+	.circle-mask {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+	}
+	.hover-up {
+		display: inline-block;
+		transition: transform 0.2s ease;
+	}
+		.hover-up:hover {
+			transform: translateY(-14px);
+		}p
+
+
+	/*도입부분호버효과*/
+		.hover-up-1,
+		.hover-up-2,
+		.hover-up-3,
+		.hover-up-4 {
+			transition: transform 0.3s ease;
+		}
+
+		/* 1 */
+		.hover-up-1 {
+			transform: rotate(-8deg);
+		}
+		.hover-up-1:hover {
+			transform: translateY(-20px) rotate(-8deg);
+		}
+
+		/* 2 */
+		.hover-up-2 {
+			transform: rotate(-19deg) skew(-5deg,-5deg);
+		}
+		.hover-up-2:hover {
+			transform: translateY(-20px) rotate(-19deg) skew(-5deg,-5deg);
+		}
+
+		/* 3 */
+		.hover-up-3 {
+			transform: rotate(17deg) skew(-11deg,-13deg);
+		}
+		.hover-up-3:hover {
+			transform: translateY(-20px) rotate(17deg) skew(-11deg,-13deg);
+		}
+
+		/* 4 */
+		.hover-up-4 {
+			transform: rotate(36deg) skew(-21deg,-17deg);
+		}
+		.hover-up-4:hover {
+			transform: translateY(-20px) rotate(36deg) skew(-21deg,-17deg);
+		}
+
+/*div class*/
+	.contents-nav{
+			width: 930px; 
+			margin: 0px 200px;
+			padding: 0px 0px;
+			justify-content: space-between;
+			align-items: center;
+		}
+	.contents-div{
+			position: relative;
+			width: 1000px; 
+			margin: auto;
+			padding: 200px 200px;
+			/*background: lemonchiffon;*/
+		}
+				/*div속 텍스트 크기*/
+				.contents-div h2{
+						font-size: 3rem;
+					}
+				.contents-div p{
+						font-size: 2rem;
+					}
+	.contents-footer{
+			width: 900px; 
+			margin-left: 90px;
+			position: relative;
+			padding: 110px 0px;
+			background: none;
+			z-index: 2;
+		}
+
+	.contents-product{
+		width: 1000px;
+		height: 600px;
+		position: relative;
+		padding: 100px 100px;
+	}
+	.product{
+				align-items: center;
+				padding: 30px 30px;
+				margin: 0;
+				background: #2F2AFF;
+			}
+	.product-sticky{
+				position: sticky;
+				top: 200px;
+				align-items: center;
+				display: inline-block;
+				padding: 0;
+				/*background: #2F2AFF;*/
+
+				transform: translateX(-250px);
+			}
+	.product-sticky-sub{
+				position: sticky;
+				top: 290px;
+				transform: translateX(-160px);
+				align-items: center;
+				display: inline-block;
+				padding: 0px;
+				/*background: #2F2AFF;*/
+			}
+				.product-sticky-sub img{
+							animation: spin linear;
+							animation-timeline: view();
+							animation-range: entry 50% entry 120%;
+						}
+				@keyframes spin{
+							from{
+								transform: rotate(0deg);
+							}
+							to{
+								transform: rotate(360deg);
+							}
+				}
+	.contents-review{
+		width: 1000px;
+		height: 600px;
+		position: absolute;
+		padding: 100px 100px;
+	}
+
+
+/*버튼들...*/
+	.button-top{
+			position: absolute;
+			right: 160px;
+			top: 193px;
+			z-index: 9997;
+
+			width: 120px;
+			height: 140px;
+			background: url(button-egg.png) center/cover no-repeat;
+			color: #2F2AFF;
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			transform: rotate(0deg);
+			transition: all 0.2s ease;
+		}
+			.button-top:hover { 
+	    transform: rotate(20deg);
+	    transition: all 0.2s;
+	  }
+
+		.button-product{
+			position: absolute;
+			z-index: 9997;
+
+			width: 160px;
+			height: 185px;
+			background: url(button-egg.png) center/cover no-repeat;
+			color: #2F2AFF;
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			transform: rotate(0deg);
+			transition: all 0.2s ease;
+		}
+			.button-product:hover { 
+	    transform: rotate(20deg);
+	    transition: all 0.2s;
+	  }
+
+	.button-wrap{
+				display: flex;
+				justify-content: center;
+				gap: 300px;
+			}
+	.button1{
+				width: 400px;
+				height: 700px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+
+	
+			}
+				.button1 span{
+							position: absolute;
+							bottom: 155px;
+							left: -14px;
+
+							transform: translateX(-50px) rotate(7deg);
+							z-index: 2;
+							}
+
+
+	.button-01{
+				background: url(man-01.png) center/ contain no-repeat;
+				transform: scale(1.0);
+				transition: all 0.2s ease;
+			
+	}
+	.button-01:active {
+ 					 transform: scale(0.8);
+ 					}
+
+	.button2{
+				width: 400px;
+				height: 700px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+				.button2 span{
+							position: absolute;
+							bottom: 20px;
+							left: -62px;
+
+							transform: translateX(-50px) rotate(-11deg);
+							z-index: 2;
+							}
+	.button-02{
+				background: url(man-02.png) center/ contain no-repeat;
+				transform: scale(1.0);
+				transition: all 0.2s ease;
+	}
+		.button-02:active {
+ 					 transform: scale(0.8);
+ 					}
+
+/*관심생겻나요버튼*/
+	input{display: none;}
+
+	.result{display: none;}
+
+	#tab1:checked ~ .result1{display: block;}
+	#tab2:checked ~ .result2{display: block;}
+
+/*그외 스타일 지정*/
+	li{
+			list-style-type: none;
+		}
+	a{
+		display: block; 
+		text-decoration: none;
+		color: inherit; 
+	}
+
+
+	nav {
+		 	position: fixed;
+		 	top: 0;
+		  left: 0;
+		  width: 100%;
+		  z-index: 9999;
+		  font-family:'BookkGothic';
+		  font-weight: 700;
+		}
+	section{
+			position: relative;
+			background:  #2F2AFF;
+			padding: 100px 0px;
+			z-index: 5;
+		}
+	footer{
+			position: relative;
+			z-index:3; 
+		}
+	html {
+			scroll-behavior: smooth;
+			word-break: keep-all;
+		}
+
+	p{
+			line-height: 1.8;
+		}
+
+/*배경 이미지*/
+	.blue-stripe-bg{
+			background: url(blue-stripe-bg.png) no-repeat center;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			z-index: 2;
+		}
+	.grass-bg{
+			background: url(grass-bg.jpg) no-repeat center;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			z-index: 2;
+		}
+
+/*물건 배경 이미지 스티키로들어가는거*/
+	.product-bg-01{
+			background: url(product-bg-01.png) no-repeat center;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			z-index: 2;
+	}
+	.product-bg-02{
+				background: url(product-bg-02.png) no-repeat center;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				z-index: 2;
+			}
+	.product-bg-03{
+				background: url(product-bg-03.png) no-repeat center;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				z-index: 2;
+			}
+	.product-bg-04{
+				background: url(product-bg-04.png) no-repeat center;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				z-index: 2;
+			}
+	.product-bg-05{
+				background: url(product-bg-05.png) no-repeat center;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				z-index: 2;
+			}
+
+/*맨 처음 배경*/
+	.main-bg-egg{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 1300px;
+			height: 1500px;
+
+			background: url(main-bg-egg.png) no-repeat center/contain;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			pointer-events: none;
+
+			filter: blur(20px);
+			transition: filter 0.2s;
+		}
+			.cover-section{
+				position: relative;
+				height: 90vh;
+				overflow: hidden;
+
+			}
+				/*	.cover-section:hover .main-bg-egg{
+						filter: blur(0px);
+					}*/
+					.cover-section-img{
+								transform: rotate(0deg) translate(-50%, -50%);
+								transition: transform 0.2s ease;
+							}
+							.cover-section-img:hover{
+										transform: rotateX(20deg) translate(-50%, -50%);
+							}
+
+/*네비게이션 글자 사이 이미지*/
+	.inline-img{
+		height: 1.4rem;
+		vertical-align: middle;
+		}
+
+/*그냥 넣는이미지들...*/
+	.footer-egg-img{
+			width: 100px;
+			pointer-events: none;
+			z-index: 1;
+	}
+	.lying-man{
+			position: absolute;
+			width: 600px;
+			top: 16%;
+			left: 30%;
+			z-index: 3;
+			pointer-events: none;
+		} 
+			.lying-man{animation: rotationZ 3s linear infinite;}
+			@keyframes rotationZ {
+					to {
+	    transform: rotateZ(360deg);
+	  }
+	}
+	.finger-png{
+				position: absolute;
+				top: 120%;
+				left:-150%;
+
+				width: 50px;
+				opacity: 0;
+
+				transform: translateY(-50%) scale(0.3) rotate(160deg);
+				transform-origin: left center;
+
+				transition: all 0.4s ease;
+				pointer-events: none;
+			}
+			/*로고에 손가락호버때문에 들어가는 거*/
+			.wrap{
+				position: relative;
+				display: inline-block;
+			}
+	.wrap:hover .finger-png{opacity: 1;
+												transform: translateY(-50%) scale(1.9) rotate(50deg);
+												top: 120%;
+												left: -104%;
+											}
+
+	.luaghing-man{	
+			position: absolute;
+			width: 400px;
+			top: 16%;
+			left: 30%;
+			z-index: 3;
+			animation: rotationX 0.2s linear infinite alternate;
+		}
+
+		@keyframes rotationX{
+				to{transform: rotateX(-10deg) rotateY(-5deg) rotateZ(-2deg);}
+				from{transform: rotateX(10deg) rotateY(7deg) rotateZ(0deg);}
+		}
+
+/*제품 타이틀*/
+	.title-box{
+				position: relative;
+				width: 600px;
+				margin-left: 480px;
+				/*margin-top: 50px;*/
+				text-align: center;
+			}
+		.title-box img{
+			width: 600px;
+			display: block;
+		}
+		.title-box h1{
+			position: absolute;
+			font-family: BookkGothic;
+			font-weight: 700;
+			/*transform: translate(-50% -50%);*/
+			margin: 0;
+		}
+		.title-box p{
+			margin-top: 40px;
+			font-size: 3.6rem;
+		}
+
+</style>
+</head>
+
+
+<body id="top" style="overflow-x: clip;">
+<!-- 네비게이션 -->
+	<nav>
+		<div class="contents-nav flex cossette-texte-regular text-white" style="font-size: 1.4rem;">
+			<div class="logo wrap" style="width: 100px;">
+				<img src="falling-egg.gif" class="circle-mask" style="width: 150px;">
+				<img src="finger.png" class="finger-png">
+			</div>
+				<ul class="menu">
+					<li class="item">
+						<a href="#top" style="padding: 10px 50px;">
+							<p class="text-box-blue">easter sh<img src="icon-egg.png" class="inline-img">p
+							</p>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#product" style="padding: 10px 50px;">
+							<p class="text-box-blue">pr<img src="icon-egg.png" class="inline-img">duct
+							</p>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#review" style="padding: 10px 50px;">
+							<p class="text-box-blue">review
+							</p>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#info" style="padding: 10px 50px;">
+							<p class="text-box-blue">ab<img src="icon-egg.png" class="inline-img">ut
+							</p>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</nav>
+<!-- 표지 -->
+	<section class="cover-section blue-stripe-bg">
+		<div class="main-bg-egg"></div>
+		<img src="maintitle-easter.png" class="cover-section-img" 
+			style="position: absolute;
+				width: 1400px;
+  			top: 38%;
+  			left: 50%;
+  			z-index: 3;">
+  	<img src="maintitle-shop.png" 
+  		class="cover-section-img" 
+			style="position: absolute;
+				width: 450px;
+  			top: 63%;
+  			left: 50%;
+  			z-index: 3;">
+  	<h2 class="absolute text-box-2 bookk-300" style="z-index: 3; font-size: 4.2rem; left: 1250px; top: 698px; transform: rotate(-5deg);"> 팝니다!!</h2>
+  	<h2 class="absolute text-box-2 bookk-300" style="z-index: 3; font-size:4.2rem; left: 1390px; top: 789px; transform: rotate(10deg);"> Sale!!</h2>
+	</section>
+
+<!-- 섹션1 - 소개, 공감 유도 -->
+	<section>
+		<div class="contents-div bookk-700 text-yellow">
+			<h2 style="line-height: 1.8; margin-top: -100px;">혹시...</h2>
+		</div>
+		<div class="contents-div bookk-700 text-pink" style="margin-top: -100px;">
+			<h2 class="absolute text-box-1 hover-up-1"
+				style="font-size: 2.5rem; top: -20px; left: 0px;">
+			인생에 콘텐츠가 부족해...</h2>
+
+			<h2 class="absolute text-box-1 hover-up-2"
+				style="font-size: 2.5rem; top: 120px; left: 310px;">
+			이제 숏폼도 질렸어.</h2>
+
+			<h2 class="absolute text-box-1 hover-up-3"
+				style="font-size: 2.5rem; top: 385px; left: 803px;">
+			진짜진짜진짜지루하다.</h2>
+
+			<h2 class="absolute text-box-1 hover-up-4"
+				style="font-size: 2.5rem; top: 580px; left: 950px;">
+			가짜 웃음도 나오질 않아...</h2>
+			<img src="lying-man.png" 
+					class="lying-man">
+		</div>
+
+		<div class="contents-div bookk-700">
+			<p class="text-white" style="margin-top: 80px;">라고 생각해본 적이 있으신가요?<br>그렇다면 잘 오셨습니다.<br>우리 이스터 샵은...<br>당신의 인생에 이스터에그가 되어 줄 물건들을 팔고 있어요.<br>SNS 업로드용 사건·사고가 필요하신 분이나, 지루한 삶에 귀여운 사고뭉치가 필요하신 분에게도 안성맞춤인 상품들이 기다리고 있습니다.</p>
+			<!-- 웃음을 보장합니다. 이런 스티커나 이미지 추가-->
+			<h2 class="text-yellow text-center" style="margin-top: 300px; margin-bottom: -300px; line-height: 2;">어떤가요?<br>이스터 샵에 조금은 흥미가 생기시나요?</h2>
+		</div>
+	</section>
+
+
+		<!-- 버튼나오는 섹션 -->
+	<section>
+		<div class="">
+			<p class="text-white text-center bookk-300" style="margin-bottom:-200px; font-size:2rem;">(버튼을 누르고 스크롤을 해 보세요.)</p>
+		</div>
+		<input type="radio" name="tab" id="tab1">
+    <input type="radio" name="tab" id="tab2">
+
+		<div class="contents-div bookk-700 button-wrap">
+
+			<label for="tab1" class="button1 button-01 text-yellow" style="font-size:3rem;">
+				<a href="#button1">
+					<span class="text-box-3">뭔 소리야?</span>
+				</a>
+			</label>
+		
+		
+			<label for="tab2" class="button2 button-02 text-pink" style="font-size: 3rem;">
+				<a href="#button2">
+					<span class="text-box-1">네, 생겼어요!</span>
+				</a>
+			</label>
+	
+		</div>
+
+		<!-- 버튼 누르면 나오는 탭 3개 기본-뭔소리야-네생겻어요 -->
+		<div class="contents-div result result1 bookk-700  grass-bg" 
+		style="height: 950px;" 
+		 id="button1">
+				<p class="text-box-2 absolute text-yellow" 
+						style="left: 80px; top:-10px; transform: rotate(-10deg);">그러니까 뭔소리냐면,</p> 
+				<p class="text-box-1 absolute text-blue" 
+				style="left: -90px; top: 140px; ">
+			이스터에그처럼 우리들의 순수한 웃음을 되찾아줄 물건들을 판매하고 있다는 뜻이에요.</p>
+
+				<p class="text-box-1-1 absolute text-blue" 
+				style="left: 241px; top: 270px;margin-right: 178px;">
+			이스터에그는... 원래 어느 게임 개발자가 게임안에 숨겨둔 메시지를 사용자가 찾아낼 수 있도록 한 일종의 장난 같은 것이었어요.</p>
+
+			<p class="text-box-1-1 absolute text-blue" 
+				style="left: 120px; top: 455px;margin-right: 376px;">
+			서양 문화에서 부활절날 집 안이나 정원에 숨겨둔 부활절 달걀을 아이들이 찾도록 하는 풍습에서 그 이름이 유래되었죠.</p>
+
+			<p class="text-box-1-1 absolute text-blue" 
+				style="left: 370px; top: 640px;margin-right: -62px;">
+			다시말해 이스터 에그는 어딘가에서 발견되길 기다리고 있는 깜짝 선물인 거예요. 게다가 이스터에그의 기능은 순전히 재미를 주기 위한 것에 있어요.</p>
+		
+	 		<p class="text-box-2 absolute text-yello" 
+			 	style="left: 590px; top:864px; margin-right:-63px; transform: rotate(12deg);">
+				이스터에그는 우리를 재미있게 해주기 위해 기다리고 있는 참 귀여운 존재들인거죠! 이스터 샵에서도 그런 물건들을 판매해요.</p> 	
+
+			<p class="text-box-1-1 absolute text-blue" 
+				style="left: 410px; top: 1010px;margin-right: 388px;">
+			 	인생의 조금의 고생, 재미, 웃음을 더해줄 귀여운 친구들입니다. 구경하고 가세요!</p>
+
+				 	<div class="button-product" 
+				 		style="right: -30px;
+				 					top: 1222px;">
+						<a href="#product">
+							<span class="bookk-700" style="font-size: 1.7rem;">구경 <span class="cossette-texte-regular">go</span></span>
+						</a> 
+					</div>
+				<!-- <p class="text-pink absolute" style="left:0; top: 1010px;"><a href="#product"> >  구경하러 가기  <</a></p> -->
+			</div>
+
+			<div class="contents-div result result2 bookk-700 grass-bg text-blue" style="height: 400px;" id="button2">
+				<p class="text-box-1 absolute text-center" 
+				style="margin-left: 318px; right: 102px; top: 69px;">우리 이스터 샵의 존재 이유는 당신의 삶에 어떤 방식으로든 진실된 웃음을 주기 위해서입니다.<br>
+				이스터 샵 물건들을 쓰고 웃음이 잦아졌다는 후기는 무려 <span class="text-pink">98.2퍼센트!</span><br>
+				수치로 증명하는 이스터 샵입니다. 구매하면 후회하지 않을 거예요.</p>
+				<img src="ha.png" class="absolute hover-up" style="width: 450px; left:90px; top: 590px; z-index: 100;">
+				<img src="man-03.png" class="luaghing-man hover-up" style="left:110px; top: 290px; z-index: 99;">
+					<div class="button-product" style="left: 1146px; top: 540px;">
+						<a href="#product">
+							<span class="bookk-700" style="font-size: 1.7rem;">구경 <span class="cossette-texte-regular">go</span></span>
+						</a>
+					</div>
+
+			</div>
+	</section>
+
+
+<!-- 섹션2 - 물건 소개 -->
+	<!-- 열쇠 -->
+			<section class="product-bg-01" id="product">
+				<div class="contents-div cossette-texte-regular" >
+					<div class="product-sticky text-box-1">
+						<img src="key.png" style="width: 600px; ">
+					</div>
+
+				<!-- 제품이름 -->
+					<div class="contents-product title-box">
+						<img src="product-title-bg.png">
+						<h1 class="text-yellow"
+								style="top: 170px;
+											left: 199px;
+											font-size: 5rem;">
+							쫀득이 열쇠
+						</h1>
+						<p class="cossette-texte-bold text-pink"
+							style="top: 200px; left: 200px;">
+							JJondugi-Key
+						</p>
+					</div>
+
+					<div class="contents-product">
+							<p class="text-box-3 absolute text-yellow" style="transform: scale(1.2); left: 455px;">1000₩</p>
+							<p class="text-blue absolute bookk-700" style="left: 430px; top: 150px;"> 소재 — 합성 고무 100%<br>사용 가능 횟수 — 이론상 무한!<br>호환성 — 매우 좋음! <span class="text-pink">모든 열쇠 구멍에 호환 가능</span><br>강도 — 연두부 대비 4.6배<br>복원 속도 — 평균 12 </p>
+							<img src="key2.png" class="absolute" style="width: 800px; left: 553px; top: 400px;">
+					</div>
+				<!-- 기술소개 -->
+					<div class="contents-product">
+						<h2 class="bookk-700 absolute text-blue" style="left: 450px;">기술 소개</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 130px; transform: rotate(0deg);">
+							1. <span class="text-box-2">Soft-core Rubber™</span><br><span style="margin-left: 30px;">흘러내리지 않으면서도 유동적인 형태를</span> <br><span style="margin-left: 30px;">유지합니다.</span>
+						</p>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 450px; transform: rotate(0deg);">
+						2. <span class="text-box-2">Memory Loss Shape System™</span><br><span style="margin-left: 30px;">맞추려고 할 수록 모양이 흐트러지는 신기술이</span><br><span style="margin-left: 30px;">적용되었습니다.</span>
+					</p>
+					</div>
+					<!-- 여기까지기술소개 -->
+
+					<div class="contents-product" style="margin-top: 360px;">
+								<h2 class="absolute text-blue" style="left: 455px;">이런 분들께 추천해요.</h2>
+								<p class=" text-box-1 absolute text-blue bookk-700" style="left: 440px; top: 150px; transform: rotate(-10deg);">1. <span class="text-pink">유연한 문제 해결 능력</span>이 필요하신 분<br>2. 손을 가만두지 못하시는 분</p> 
+					</div>
+				</div>
+			</section>
+
+	<!-- 시계 -->
+			<section class="product-bg-02">
+				<div class="contents-div cossette-texte-regular">
+					<div class="product-sticky text-box-4">
+						<img src="clock.png" style="width: 600px;">
+					</div>
+
+				<!-- 제품이름 -->
+					<div class="contents-product title-box">
+						<img src="product-title-bg.png">
+						<h1 class="text-yellow"
+								style="top: 178px;
+											left: 141px;
+											font-size: 4.1rem;">
+							아무때나 알람시계
+						</h1>
+						<p class="cossette-texte-bold text-pink"
+							style="top: 200px; left: 200px;">
+							Amu-time Alarm Clock
+						</p>
+					</div>
+
+					<div class="contents-product">
+							<p class="text-box-3 absolute text-yellow" style="transform: scale(1.2); left: 460px;">7200₩</p>
+							<p class="text-blue text-box-1 absolute bookk-700" style="left: 445px; top: 150px;">원하는 시간에 울릴 확률 — <span class="text-pink">7%</span> (은근히 높습니다.)<br>일주일 간 기상 성공률 — 2%~81%</p>
+					</div>
+
+				<!-- 기술소개 -->
+					<div class="contents-product">
+						<h2 class="absolute text-blue text-box-white" style="left: 450px; ">기술 소개</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 130px; transform: rotate(-10deg);">
+							1. <span class="text-box-2">Unpredictive Wake System™</span><br><span style="margin-left: 30px;">사용자의 수면 패턴을 무시하고 랜덤으로</span><br><span style="margin-left: 30px;">울립니다.</span>
+						</p>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 450px; transform: rotate(-10deg);">
+						2. <span class="text-box-2">Chaos Time AI™</span><br><span style="margin-left: 30px;">설정 시간과 관계없이 작동하는 비순차 시간</span><br><span style="margin-left: 30px;">엔진이 활용되었습니다.</span>
+					</p>
+					</div>
+					<!-- 여기까지기술소개 -->
+
+					<div class="contents-product" style="margin-top: 360px;">
+								<h2 class="text-box-white absolute text-blue" style="left: 450px;">이런 분들께 추천해요.</h2>
+								<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 150px; transform: rotate(10deg);">1. 일상에 긴장감이 필요하신 분<br>2. 매일 같은 시간에 일어나는 일에 질리신 분<br>3. 얽매이기 싫은 자유로운 영혼을 가지신 </p>
+					</div>
+
+				</div>
+			</section>
+
+		<!-- 이어폰 -->
+			<section class="product-bg-03">
+				<div class="contents-div cossette-texte-regular">
+					<div class="product-sticky text-box-4">
+						<img src="earphone.png" style="width: 600px; ">
+					</div>
+
+				<!-- 제품이름 -->
+					<div class="contents-product title-box">
+						<img src="product-title-bg.png">
+						<h1 class="text-yellow"
+								style="top: 174px;
+											left: 166px;
+											font-size: 4.7rem;">
+							엉킴이 이어폰
+						</h1>
+						<p class="cossette-texte-bold text-pink"
+							style="top: 200px; left: 200px;">
+							Unkimi-Earphone
+						</p>
+					</div>
+
+					<div class="contents-product">
+							<p class="text-box-3 absolute text-yellow" style="transform: scale(1.2); left: 455px;">5000₩</p>
+							<p class="text-blue absolute bookk-700" style="left: 440px; top: 150px;"> 사이즈 — 풀면 1.2m, 엉키면 가로세로 7cm<br>재엉킴 로딩 시간 — 평균 12초<br>엉킴 밀도 — 89% 이상</p>
+					</div>
+
+					<!-- 기술소개 -->
+					<div class="contents-product">
+						<h2 class="bookk-700 absolute text-blue" style="left: 450px;">기술 소개</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 130px; transform: rotate(0deg);">
+							1. <span class="text-box-2">Deep Learning Self-Tangle Memory Wire™</span><br><span style="margin-left: 30px;">풀 때마다 사용자의 수준을 학습하고 점점</span><br><span style="margin-left: 30px;">풀기 어려운 형태로 꼬입니다.</span>
+						</p>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 450px; transform: rotate(0deg);">
+						2. <span class="text-box-2">Lossless LDAC Codex™</span><br><span style="margin-left: 30px;">올곧 최상급 음질을 지원합니다!!!</span>
+					</p>
+					</div>
+					<!-- 여기까지기술소개-->
+
+					<div class="contents-product" style="margin-top: 360px;">
+								<h2 class="bookk-700 absolute text-blue" style="left: 450px;">이런 분들께 추천해요.</h2>
+								<p class=" text-box-1 absolute text-blue bookk-700" style="left: 462px; top: 150px; transform: rotate(10deg);">1. 매일 작은 성공을 하고 싶으신 분<br>2. <span class="text-pink">내 인생보다 꼬인게 있을까 싶으신 분</span>(바로 이겁니다.)</p> 
+					</div>
+
+				</div>
+			</section>
+
+
+	<!-- 저속충전보조배처리 -->
+			<section class="product-bg-04">
+				<div class="contents-div cossette-texte-regular">
+					<div class="product-sticky text-box-4">
+						<img src="battery1.png" style="width: 600px;">
+					</div>
+
+				<!-- 제품이름 -->
+					<div class="contents-product title-box">
+						<img src="product-title-bg.png">
+						<h1 class="text-yellow"
+								style="top: 176px;
+											left: 166px;
+											font-size: 4.3rem;">
+							찔끔 보조배터리
+						</h1>
+						<p class="cossette-texte-bold text-pink"
+							style="top: 200px; left: 200px;">
+							Jjilggeum-Power Bank
+						</p>
+					</div>
+
+					<div class="contents-product">
+						<p class="text-box-3 absolute text-yellow" style="transform: scale(1.2); left: 455px;">9000₩</p>
+						<p class="text-blue text-box-1 absolute bookk-700" style="left: 430px; top: 150px;">완충 소요 시간 — 18시간 40분<br>충전 체감 속도 — <span class="text-pink">지렁이 기어가는 속도 대비 0.9배</span><br>충전 중 발열 — 없음!</p>
+					</div>
+
+					<!-- 기술소개 -->
+					<div class="contents-product">
+						<h2 class="text-box-white absolute text-blue bookk-700" style="left: 450px;">기술 소개</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 130px; transform: rotate(0deg);">
+							1. <span class="text-box-2">Slow Charge Preservation™</span><br><span style="margin-left: 30px;">전력을 아끼기 위해 일부러 천천히 충전하는</span><br><span style="margin-left: 30px;">생각보다 친환경적인 기술을 활용합니다.</span>
+						</p>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 450px; transform: rotate(0deg);">
+						2. <span class="text-box-2">Psychological Waiting UX™</span><br><span style="margin-left: 30px;">소수점 3번째 자리까지 보여주어 심리적 희망을</span><br><span style="margin-left: 30px;">유지시켜주는 인터페이스가 적용되었습니다.</span>
+					</p>
+					</div>
+					<!-- 여기까지기술소개-->
+
+
+					<div class="contents-product" style="margin-top: 360px;">
+						<h2 class="text-box-white absolute text-blue bookk-700" style="left: 430px;">이런 분들께 추천해요.</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 430px; top: 150px; transform: rotate(10deg);">1. 여유있는 일상이 필요하신 분<br>2. 급한 성미를 고치고 싶으신 분<br>3. 무엇이든 포기하지 않는, <span class="text-pink">집념의 인간</span>이 되고 싶으신 분</p>
+					</div>
+
+					<div class="product-sticky-sub">
+						<img src="battery2.png" class="text-box-2" style="width: 400px;">
+					</div>
+
+
+					<div class="contents-product">
+						<h2 class="text-box-1 absolute text-pink bookk-700" style="left: 450px;">특별 사은품 증정!</h2>
+						<p class="text-box-1 absolute text-blue bookk-700" style="left: 410px; top: 140px; transform: rotate(-8deg);">질리도록 긴 4M 충전기 선을 같이드립니다. 충전이 느려 충전기를 뺄 수 없어도 방 안 어디든 갈 수 있어요.</p>
+					</div>
+				</div>
+			</section>
+
+	<!-- 컵 -->
+			<section class="product-bg-05">
+				<div class="contents-div cossette-texte-regular">
+					<div class="product-sticky text-box-4">
+						<img src="cup.png" style="width: 600px; ">
+					</div>
+
+				<!-- 제품이름 -->
+					<div class="contents-product title-box">
+						<img src="product-title-bg.png">
+						<h1 class="text-yellow"
+								style="top: 170px;
+											left: 232px;
+											font-size: 5rem;">
+							동글이 컵
+						</h1>
+						<p class="cossette-texte-bold text-pink"
+							style="top: 200px; left: 200px;">
+							Donggeuri-Cup
+						</p>
+					</div>
+
+					<div class="contents-product">
+							<p class="text-box-3 absolute text-yellow" style="transform: scale(1.2); left: 440px;">2700₩</p>
+							<p class="text-blue absolute bookk-700" style="left: 430px; top: 150px;"> 소재 — 반투명 내열성 플라스틱<br>아랫면 — <span class="text-pink">백자처럼 유려한 곡선</span>의 반구형(hemisphere)<br>자립 유지 가능 시간 — 평균 1.8초<br>엎어질 확률 — 96% (4%의 고객님들은 리뷰를 작성해주시면 하나를 더 보내드립니다.)<br>내려놓는 순간 다시 잡고싶어지는 인터랙티브 경험 제공</p>
+					</div>
+
+					<!-- 기술소개 -->
+					<div class="contents-product">
+						<h2 class="bookk-700 absolute text-blue" style="left: 450px;">기술 소개</h2>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 130px; transform: rotate(0deg);">
+							1. <span class="text-box-2">Infinite Tilt Blalance™</span><br><span style="margin-left: 30px;">무한으로 기울어지는 새로운 개념의 컵을</span><br><span style="margin-left: 30px;">만나보세요.</span>
+						</p>
+						<p class=" text-box-1 absolute text-blue bookk-700" style="left: 450px; top: 450px;">
+						2. <span class="text-box-2">Anti-Stable Bottom Structure™</span><br><span style="margin-left: 30px;">컵이 책상과 거리감을 유지하도록 설계된</span><br><span style="margin-left: 30px;">곡면 하부가 적용되었습니다.</span>
+					</p>
+					</div>
+					<!-- 여기까지기술소개-->
+
+					<div class="contents-product" style="margin-top: 360px;">
+								<h2 class=" bookk-700 absolute text-blue " style="left: 450px;">이런 분들께 추천해요.</h2>
+								<p class=" text-box-1 absolute text-blue bookk-700" style="left:440px; top: 150px; transform: rotate(5deg);">1. 학창시절... 볼펜을 세우기 위해 애를 써보신 분<br>2. <span class="text-pink">무게중심 컨트롤 능력</span>을 갖추고 싶으신 분<br>3. 어항을 들여다보는 고양이처럼 <span class="text-pink">고도의 집중력</span>을 원하시는 분</p> 
+					</div>
+				</div>
+			</section>
+
+<!-- 섹션3 - 이용 후기 -->
+	<section class="grass-bg" style="position: relative; line-height: 1.8; height: 1200px; display: flex;
+	justify-content: center; align-items: center;">
+		<div class="contents-div bookk-700  text-center" style="">
+			<h1 class="text-box-white text-blue" style="font-size: 3rem;">
+				수많은 이용 후기가 증명하는<br>이스터 샵 물품들의 <span class="text-pink">지루함 타파 능력!</span>
+			</h1>
+		</div>
+
+		
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.6rem;
+							top: 420px; 
+							left: -60px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 600px;">
+			<p class="text-box-blue" style="margin-right: 600px;">
+				여기 보조배터리를 쓰고 저는 <span class="bookk-700 text-white">작은 것에도 기뻐하는 사람으로 다시 태어났습니다.</span> </p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: 593px; 
+							left: 1060px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 490px;">
+			<p class="text-box-blue" style="margin-right: 490px;">
+				시계가 언제 울릴지 몰라서 요즘 깊게 자지 않는 체질이 됐어요... 어쨌든 <span class="bookk-700 text-white">구매 이후로는 지각을 한 번도 한 적 없어요!</span> 좋은 것 같아요. </p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.4rem;
+							top: 750px; 
+							left: 620px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 700px;">
+			<p class="text-box-blue" style="margin-right: 700px;">
+				이 컵... 어쩔 수 없이 두 손으로 들어야 해서 <span class="bookk-700 text-white">따뜻함을 더 소중히 느끼게 돼요.</span> 열에 센 소재라서 차 마시기 좋습니다.</p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.4rem;
+							top: 230px; 
+							left: 800px;">
+			<img id="review" src="review-egg.png" style="width: 80px; margin-right: 600px;">
+			<p class="text-box-blue" style="margin-right: 600px;">
+				처음엔 왜 이런 걸 왜파나 싶었지만 쓰다보니까 이벤트 중독자라 너무 만족스럽네요...</p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: -87px; 
+							left: 500px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 490px;">
+			<p class="text-box-blue" style="margin-right: 490px;">
+				1시간 동안 겨우 6% 올랐더라고요. 덕분에 <span class="bookk-700 text-white">대화에 집중하게 돼서 인간관계가 좋아졌습니다.</span> 디지털 디톡스에도 최고예요.</p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: -50px; 
+							left: 1069px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 490px;">
+			<p class="text-box-blue" style="margin-right: 490px;">
+				너무 안 풀려서 그냥 목걸이처럼 걸고 다녔는데 의외로 예쁘다는 말 들었습니다. 패션 아이템으로도 좋은듯요.</p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: 83px; 
+							left: -4px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 550px;">
+			<p class="text-box-blue" style="margin-right: 550px;">
+				지하철에서 붙잡고 있는데 옆 사람이 같이 고민해줬습니다. <span class="bookk-700 text-white">덕분에 처음 보는 사람이랑 대화도 해봤네요.</span></p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: 870px; 
+							left: 70px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 490px;">
+			<p class="text-box-blue" style="margin-right: 490px;">
+				미친 알람시계 새벽 5시에 울려서 처음엔 화났는데 덕분에 <span class="bookk-700 text-white">일출 처음 봤습니다. 감성 있는 제품이에요.</span></p>
+		</div>
+
+		<div class="contents-review bookk-300 text-yellow text-center" style=" font-size:1.7rem;
+							top: 950px; 
+							left: 1000px;">
+			<img src="review-egg.png" style="width: 80px; margin-right: 490px;">
+			<p class="text-box-blue" style="margin-right: 490px;">
+				밤낮이 바뀌어서 힘들었었는데 알람을 믿지 못하게 되면서 <span class="bookk-700 text-white">제 몸이 생체시계를 되찾고 있습니다.</span> 너무 신기해요.</p>
+		</div>
+	</section>
+ 	
+ 	<section class="grass-bg">
+ 		<div class="contents-div bookk-300 text-center blur"
+ 					style="margin-bottom: 100px;">
+ 			<h1 class="text-white" style="line-height: 1.9; font-size: 3rem;">
+ 				취향과 니즈에 맞는 물건으로,<br><span class="text-yellow bookk-700 text-box-3">삶에 작은 이스터에그를 심어보세요.</span>
+ 			</h1>
+ 			
+ 		</div>
+ 	</section>
+
+<!-- 폼폼푸터 -->
+	<section style="padding: 0; width:100%; position: relative; background: #2F2AFF;" id="info">
+		<footer class="text-yellow">
+			<div class="contents-footer">
+				<h1 class="bitcount-single blur" style="padding-left: 30px; font-size: 7rem;"> 
+				Easter Shop</h1>
+				<p class="bookk-700 blur" style="padding-left: 30px;font-size:1.5rem;">— 세상의 모든 심심한 사람들을 위하여...</p>
+				<p class="bookk-300 blur" style="padding-left: 30px; font-size:1rem; padding-top: 70px; padding-bottom:20px; line-height: 1.7;">2026년도 1학기 서울과학기술대학교 웹퍼블리싱
+					<br>rlatlgus@seoultech.ac.kr<br>2026&copy;김시현. 모든 권리 보유.</p>
+			</div>
+			<!-- top버튼 -->
+			<div class="button-top cossette-texte-regular">
+				<a href="#top">
+					<span style="font-size: 1.3rem;">Top!!</span>
+				</a>
+			</div>
+				<!-- 그냥계란반복패턴 -->
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1550px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1550px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1300px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1300px; top: 340px;">
+						
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1050px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 1050px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 800px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 800px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 550px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 550px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 300px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 300px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: 50px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left:50px; top: 340px;">
+
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left: -200px; top: 55px;">
+							<img src="button-egg.png" 
+									class="footer-egg-img absolute"
+									style="left:-200px; top: 340px;">
+		</footer>
+	</section>
+</body>
+</html>
+
+
